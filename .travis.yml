@@ -5,7 +5,7 @@ node_js:
 install:
   - npm install
 script:
-  - \cp -i -f generate.js node_modules/planet.js/lib/generate.js
+  - \cp -f generate.js node_modules/planet.js/lib/generate.js
   - chmod +x ./deploy.sh
   - npm run build
   - ./deploy.sh > /dev/null
