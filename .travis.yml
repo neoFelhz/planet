@@ -8,7 +8,7 @@ script:
   - \cp -f generate.js node_modules/planet.js/lib/generate.js
   - chmod +x ./deploy.sh
   - npm run build
-  - \cp -f CNAME /public
+  - \cp -f CNAME public/CNAME
   - ./deploy.sh > /dev/null
 cache:
   directories:
