@@ -1,0 +1,12 @@
+{
+  "name": "Planet",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "planet",
+    "init": "planet i"
+  },
+  "dependencies": {
+    "planet.js": "^0.2.6"
+  }
+}
