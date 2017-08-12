@@ -5,14 +5,10 @@ node_js:
 install:
   - npm install
 script:
-#  - chmod +x ../patch.sh
-  - chmod +x ../deploy.sh
-#  - ../patch.sh > /dev/null
+  - cp -i generate.js node_modules/planet.js/lib/generate.js
+  - chmod +x ./deploy.sh
   - npm run build
-  - ../deploy.sh > /dev/null
-branches:
-  only:
-    - raw
+  - ./deploy.sh > /dev/null
 cache:
   directories:
     - node_modules
