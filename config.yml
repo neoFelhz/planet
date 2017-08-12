@@ -2,8 +2,8 @@
 
 planet:
   name: "neoFelhz's Planet" # Site title
-  tagline: "neoFelhz ?????" # Site tagline
-  description: "neoFelhz ?????" # Site description
+  tagline: "neoFelhz 的伙伴星球" # Site tagline
+  description: "neoFelhz 的伙伴星球" # Site description
   link: https://planet.nfz.moe # Site link, do NOT include tailing slash '/'
   locale: zh-CN # Site locale
   owner_name: neoFelhz # Your name
@@ -89,7 +89,7 @@ people:
 - name: Viosey
   link: https://blog.viosey.com/atom.xml
   avatar: https://img1.nfz.yecdn.com/avatar/viosey.com.png
-- name: ????
+- name: 蠢黑通行
   link: https://blackyau.cc/feed
   avatar: https://img1.nfz.yecdn.com/links/blackyau.cc.jpg
 - name: Zohar
@@ -128,10 +128,10 @@ people:
 - name: Ice-Hazymoon
   link: https://imiku.me/feed
   avatar: https://img1.nfz.yecdn.com/links/imiku.me.png
-- name: ????
+- name: 梦魇小站
   link: https://blog.ihoey.com/atom.xml
   avatar: https://img1.nfz.yecdn.com/links/blog.ihoey.com.png
-- name: ???????
+- name: 只有一秒的记忆
   link: https://blog.asec01.net/feed.xml
   avatar: https://img1.nfz.yecdn.com/links/blog.asec01.net.png
 
