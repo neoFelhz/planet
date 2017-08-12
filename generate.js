@@ -114,7 +114,9 @@ function sanitize (content, config, origin) {
                         attribs.src.startsWith('https://')) {
                         return {
                             tagName: tagName,
-                            attribs: 'https://api.onji.cn/img/?url=' + attribs
+                            attribs: {
+                                src: 'https://api.onji.cn/img/?url=' + attribs.src
+                            }
                         };
                     } else {
                         // relative path not correct?
@@ -128,7 +130,9 @@ function sanitize (content, config, origin) {
                 }
                 return {
                     tagName: tagName,
-                    attribs: 'https://api.onji.cn/img/?url=' + attribs
+                    attribs: {
+                        src: 'https://api.onji.cn/img/?url=' + attribs.src
+                      }
                 };
             },
             'a': function (tagName, attribs) {
