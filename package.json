@@ -3,10 +3,15 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "planet",
+    "build": "planet && gulp",
     "init": "planet i"
   },
   "dependencies": {
     "planet.js": "^0.2.6"
+  }
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-htmlclean": "^2.7.14",
+    "gulp-htmlmin": "^3.0.0"
   }
 }
