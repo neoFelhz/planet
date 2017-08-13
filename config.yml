@@ -84,6 +84,9 @@ secure:
   allowProtocolRelative: true
 
 people:
+- name: neoFelhz
+  link: https://blog.nfz.moe/atom.xml
+  avatar: https://img1.nfz.yecdn.com/avatar/avatar.png
 - name: SkyEdge
   link: https://liyin.date/rss2.xml
   avatar: https://img1.nfz.yecdn.com/links/liyin.date.png
@@ -135,4 +138,7 @@ people:
 - name: 只有一秒的记忆
   link: https://blog.asec01.net/feed.xml
   avatar: https://img1.nfz.yecdn.com/links/blog.asec01.net.png
+- name: Lirici
+  link: https://blog.lirici.moe/feed
+  avatar: https://img1.nfz.yecdn.com/links/lirici.moe.jpg
 
