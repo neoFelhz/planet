@@ -116,8 +116,7 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://api.onji.cn/img/?url=' + attribs.src,
-                                referrerpolicy: 'no-referrer'
+                                src: 'https://api.onji.cn/img/?url=' + attribs.src
                             }
                         };
                     } else {
@@ -125,8 +124,7 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://api.onji.cn/img/?url=' + host + '/' + attribs.src,
-                                referrerpolicy: 'no-referrer'
+                                src: 'https://api.onji.cn/img/?url=' + host + '/' + attribs.src
                             }
                         };
                     }
@@ -134,8 +132,7 @@ function sanitize (content, config, origin) {
                 return {
                     tagName: tagName,
                     attribs: {
-                        src: 'https://api.onji.cn/img/?url=' + attribs.src,
-                        referrerpolicy: 'no-referrer'
+                        src: 'https://api.onji.cn/img/?url=' + attribs.src
                       }
                 };
             },
