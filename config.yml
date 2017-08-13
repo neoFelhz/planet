@@ -12,8 +12,8 @@ planet:
   output: public # output directory, make sure your web server can read in this place
   timeout: 40 # request timeout in seconds
   items: 150 # how many posts should be displayed?
-  items_feed: 200 # maximum posts in feed
-  display_length: 500 # posts longer than this characters, a summary will be displayed (if available)
+  items_feed: 300 # maximum posts in feed
+  display_length: 1500 # posts longer than this characters, a summary will be displayed (if available)
   time_format: MMMM Do YYYY h:mm:ss A # See http://momentjs.com/docs/#/displaying/ for details
   ttl: 120 # TimeToLive minutes to cache site feed
 
@@ -64,6 +64,7 @@ secure:
   - defs
   - path
   - use
+  - [script]
   allowedAttributes:
     a:
     - href
@@ -85,10 +86,10 @@ secure:
 people:
 - name: SkyEdge
   link: https://liyin.date/rss2.xml
-  avatar: https://img1.nfz.yecdn.com/avatar/liyin.date.png
+  avatar: https://img1.nfz.yecdn.com/links/liyin.date.png
 - name: Viosey
   link: https://blog.viosey.com/atom.xml
-  avatar: https://img1.nfz.yecdn.com/avatar/viosey.com.png
+  avatar: https://img1.nfz.yecdn.com/links/viosey.com.png
 - name: 蠢黑通行
   link: https://blackyau.cc/feed
   avatar: https://img1.nfz.yecdn.com/links/blackyau.cc.jpg
