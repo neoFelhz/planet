@@ -106,7 +106,8 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://api.onji.cn/img/?url=' + host + attribs.src
+                                src: 'https://api.onji.cn/img/?url=' + host + attribs.src,
+                                referrerpolicy: 'no-referrer'
                             }
                         };
                     } else if (attribs.src.startsWith('//') ||
@@ -115,7 +116,8 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://api.onji.cn/img/?url=' + attribs.src
+                                src: 'https://api.onji.cn/img/?url=' + attribs.src,
+                                referrerpolicy: 'no-referrer'
                             }
                         };
                     } else {
@@ -123,7 +125,8 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://api.onji.cn/img/?url=' + host + '/' + attribs.src
+                                src: 'https://api.onji.cn/img/?url=' + host + '/' + attribs.src,
+                                referrerpolicy: 'no-referrer'
                             }
                         };
                     }
@@ -131,7 +134,8 @@ function sanitize (content, config, origin) {
                 return {
                     tagName: tagName,
                     attribs: {
-                        src: 'https://api.onji.cn/img/?url=' + attribs.src
+                        src: 'https://api.onji.cn/img/?url=' + attribs.src,
+                        referrerpolicy: 'no-referrer'
                       }
                 };
             },
@@ -141,7 +145,8 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                href: link + attribs.href
+                                href: link + attribs.href,
+                                rel: 'nofollow'
                             }
                         }
                     } else if (attribs.href.startsWith('/') && attribs.href.charAt(1) !== '/') {
@@ -149,13 +154,16 @@ function sanitize (content, config, origin) {
                             tagName: tagName,
                             attribs: {
                                 href: host + attribs.href
+                                rel: 'nofollow'
                             }
                         }
                     }
                 }
                 return {
                     tagName: tagName,
-                    attribs: attribs
+                    attribs: {
+                        rel: 'nofollow'
+                    }
                 };
             }
         }

@@ -12,6 +12,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/planet.js@0.2.6/assets/init/templates/pure/static/css/grids-responsive-min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/planet.js@0.2.6/assets/init/templates/pure/static/css/style.css">
     <script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <!-- Google Analytics -->
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-83054354-5', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
 </head>
 <body>
 <div id="layout" class="pure-g">
@@ -54,7 +62,7 @@
                         <% } else { %>
                         <img width="48" height="48" alt="<%= p.author %>&#x27;s avatar" class="post-avatar" src="img/akarin.jpg">
                         <% } %>
-                        <h2 class="post-title"><a href="<%= p.link %>" class="post-title"><%= p.title %></a></h2>
+                        <h2 class="post-title"><a href="<%= p.link %>" class="post-title" rel="nofollow noopener"><%= p.title %></a></h2>
                         <p class="post-meta">
                             <span class="post-author"><%= p.author %></span>
                             <%
@@ -68,7 +76,7 @@
                     <div class="post-description">
                         <% if (p._length > config['planet'].display_length && p.summary) { %>
                         <%- p.summary %>
-                        <div><p class="post-meta">[<em><a href="<%= p.link %>">Continue reading...</a></em>]</p></div>
+                        <div><p class="post-meta">[<em><a href="<%= p.link %>" rel="nofollow noopener">Continue reading...</a></em>]</p></div>
                         <% } else { %>
                         <%- p.content %>
                         <% } %>
@@ -83,7 +91,7 @@
                 <div class="pure-menu pure-menu-horizontal people-list">
                     <ul>
                         <% config['people'].forEach(function(s) { %>
-                        <li class="pure-menu-item">[<a href="<%= s.link %>" class="pure-menu-link"><%= s.name %></a>]</li>
+                        <li class="pure-menu-item">[<a rel="nofollow noopener" href="<%= s.link %>" class="pure-menu-link"><%= s.name %></a>]</li>
                         <% }) %>
                     </ul>
                 </div>
