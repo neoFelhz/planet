@@ -145,8 +145,7 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                href: link + attribs.href,
-                                rel: 'nofollow'
+                                href: link + attribs.href
                             }
                         }
                     } else if (attribs.href.startsWith('/') && attribs.href.charAt(1) !== '/') {
@@ -154,16 +153,13 @@ function sanitize (content, config, origin) {
                             tagName: tagName,
                             attribs: {
                                 href: host + attribs.href
-                                rel: 'nofollow'
                             }
                         }
                     }
                 }
                 return {
                     tagName: tagName,
-                    attribs: {
-                        rel: 'nofollow'
-                    }
+                    attribs: attribs
                 };
             }
         }
