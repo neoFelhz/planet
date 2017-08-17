@@ -20,6 +20,7 @@
     </script>
     <script async src='https://www.google-analytics.com/analytics.js'></script>
     <!-- End Google Analytics -->
+    <% if(config['planet'].lazyload) { %><script src="https://cdnjs.cat.net/ajax/libs/vanilla-lazyload/8.0.1/lazyload.min.js"></script> <% } %>
 </head>
 <body>
 <div id="layout" class="pure-g">
@@ -62,7 +63,7 @@
                         <% } else { %>
                         <img width="48" height="48" alt="<%= p.author %>&#x27;s avatar" class="post-avatar" src="img/akarin.jpg">
                         <% } %>
-                        <h2 class="post-title"><a href="<%= p.link %>" class="post-title" rel="nofollow noopener"><%= p.title %></a></h2>
+                        <h2 class="post-title"><a href="<%= p.link %>" class="post-title"><%= p.title %></a></h2>
                         <p class="post-meta">
                             <span class="post-author"><%= p.author %></span>
                             <%
@@ -75,10 +76,18 @@
                     </header>
                     <div class="post-description">
                         <% if (p._length > config['planet'].display_length && p.summary) { %>
-                        <%- p.summary %>
-                        <div><p class="post-meta">[<em><a href="<%= p.link %>" rel="nofollow noopener">Continue reading...</a></em>]</p></div>
+                          <% if(config['planet'].lazyload) { %>
+                            <%- p.summary.replace('src','data-original') %>
+                          <% } else { %>
+                            <%- p.summary %>
+                          <% } %>
+                        <div><p class="post-meta">[<em><a href="<%= p.link %>">Continue reading...</a></em>]</p></div>
                         <% } else { %>
-                        <%- p.content %>
+                          <% if(config['planet'].lazyload) { %>
+                            <%- p.content.replace('src','data-original') %>
+                          <% } else { %>
+                            <%- p.content %>
+                          <% } %>
                         <% } %>
                     </div>
                 </section>
@@ -91,7 +100,7 @@
                 <div class="pure-menu pure-menu-horizontal people-list">
                     <ul>
                         <% config['people'].forEach(function(s) { %>
-                        <li class="pure-menu-item">[<a rel="nofollow noopener" href="<%= s.link %>" class="pure-menu-link"><%= s.name %></a>]</li>
+                        <li class="pure-menu-item">[<a href="<%= s.link %>" class="pure-menu-link"><%= s.name %></a>]</li>
                         <% }) %>
                     </ul>
                 </div>
@@ -100,6 +109,7 @@
     </div>
     <script>
         hljs.initHighlightingOnLoad();
+        <% if(config['planet'].lazyload) { %>var myLazyLoad = new LazyLoad();<% } %>
     </script>
 </div>
 </body>
