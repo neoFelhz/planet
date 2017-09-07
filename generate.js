@@ -78,7 +78,7 @@ function parsepost (post, avatar, config) {
 function avatarlink (avatar) {
     var p_email = new RegExp(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/i);
     return p_email.test(avatar) ?
-        'https://www.gravatar.com/avatar/' + crypto.createHash('md5').update(avatar.toLowerCase()).digest("hex") : avatar;
+        'https://gravatar.cat.net/avatar/' + crypto.createHash('md5').update(avatar.toLowerCase()).digest("hex") : avatar;
 }
 
 function validuri (uri) {
@@ -106,7 +106,7 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://api.onji.cn/img/?url=' + host + attribs.src,
+                                src: 'https://api.onji.cn/img/600px.php?url=' + host + attribs.src,
                                 referrerpolicy: 'no-referrer'
                             }
                         };
@@ -116,7 +116,7 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://api.onji.cn/img/?url=' + attribs.src,
+                                src: 'https://api.onji.cn/img/600px.php?url=' + attribs.src,
                                 referrerpolicy: 'no-referrer'
                             }
                         };
@@ -125,7 +125,7 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://api.onji.cn/img/?url=' + host + '/' + attribs.src,
+                                src: 'https://api.onji.cn/img/600px.php?url=' + host + '/' + attribs.src,
                                 referrerpolicy: 'no-referrer'
                             }
                         };
@@ -134,7 +134,7 @@ function sanitize (content, config, origin) {
                 return {
                     tagName: tagName,
                     attribs: {
-                        src: 'https://api.onji.cn/img/?url=' + attribs.src,
+                        src: 'https://api.onji.cn/img/600px.php?url=' + attribs.src,
                         referrerpolicy: 'no-referrer'
                       }
                 };
