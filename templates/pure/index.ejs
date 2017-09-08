@@ -59,9 +59,9 @@
                     </p>
                     <header class="post-header">
                         <% if (p.avatar) { %>
-                        <img width="48" height="48" alt="<%= p.author %>&#x27;s avatar" class="post-avatar" src="<%= p.avatar %>">
+                        <img width="48" height="48" alt="<%= p.author %>&#x27;s avatar" class="post-avatar" data-original="<%= p.avatar %>">
                         <% } else { %>
-                        <img width="48" height="48" alt="<%= p.author %>&#x27;s avatar" class="post-avatar" src="img/akarin.jpg">
+                        <img width="48" height="48" alt="<%= p.author %>&#x27;s avatar" class="post-avatar" data-original="img/akarin.jpg">
                         <% } %>
                         <h2 class="post-title"><a href="<%= p.link %>" class="post-title"><%= p.title %></a></h2>
                         <p class="post-meta">
