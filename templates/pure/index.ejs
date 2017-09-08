@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cat.net/ajax/libs/pure/0.6.2/grids-responsive-min.css">
     <link rel="stylesheet" type="text/css" href="https://static.nfz.yecdn.com/planet/style.css">
     <script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cat.net/ajax/libs/pangu/3.3.0/pangu.min.js"></script>
     <!-- Google Analytics -->
     <script>
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -110,6 +111,7 @@
     <script>
         hljs.initHighlightingOnLoad();
         <% if(config['planet'].lazyload) { %>var myLazyLoad = new LazyLoad();<% } %>
+        pangu.spacingPage();
     </script>
 </div>
 </body>
