@@ -27,10 +27,12 @@
     <!-- End Google Analytics -->
 </head>
 
-<body class="mdui-drawer-body-left">
-    <div class="mdui-toolbar">
-        <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
-        <span class="mdui-typo-title"><%= config['planet'].name %></span>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar">
+    <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
+        <div class="mdui-toolbar">
+            <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
+            <span class="mdui-typo-title"><%= config['planet'].name %></span>
+        </div>
     </div>
     <div class="mdui-container">
         <div class="mdui-row-xs-1">
