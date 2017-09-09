@@ -62,7 +62,7 @@
                             <img class="mdui-card-header-avatar" alt="<%= p.author %>&#x27;s avatar" data-original="img/akarin.jpg">
                         <% } %>
                         <div class="mdui-card-header-title"><%= p.author %></div>
-                        <div class="mdui-card-header-subtitle"><%= p.date %></div>
+                        <div class="mdui-card-header-subtitle">Publish: <%= p.date %></div>
                         <% if (p.update && p.update !== p.date) { %>
                             <div class="mdui-card-header-subtitle">Update: <%= p.update %></div>
                         <% } %>
@@ -80,6 +80,7 @@
                             <%- p.content.replace(new RegExp('src=','g'),'data-original=') %>
                         <% } %>
                     </div>
+                    <div class="mdui-divider"></div>
                     <div class="mdui-card-actions mdui-text-center">
                         <a href="<%= p.link %>" target="_blank" class="mdui-btn mdui-ripple">Continue reading...</a>
                     </div>
