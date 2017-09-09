@@ -30,7 +30,6 @@
 <body class="mdui-drawer-body-left">
     <div class="mdui-container">
         <div class="mdui-row">
-            <div class="mdui-col-sm-12 mdui-col-md-4">
             <%
                 var cstyles = 'abcd';
                 var limit = posts.length > config['planet'].items ? config['planet'].items : posts.length
@@ -38,6 +37,7 @@
                     var p = posts[i];
             %>
             <section class="post">
+            <div class="mdui-col-sm-12 mdui-col-md-4">
                 <div class="mdui-card">
                     <div class="mdui-card-header">
                         <% if (p.avatar) { %>
@@ -68,8 +68,8 @@
                     </div>
                 </div>
             </section>
-            <% } %>
             </div>
+            <% } %>
         </div>
     </div>
     <div class="mdui-drawer">
@@ -93,7 +93,7 @@
             </a>
             <li class="mdui-subheader">List</li>
             <% config['people'].forEach(function(s) { %>
-                [<a href="<%= s.link %>" class="mdui-list-item mdui-ripple"><%= s.name %></a>]
+                <a href="<%= s.link %>" class="mdui-list-item mdui-ripple"><%= s.name %></a>
             <% }) %>
         </ul>
     </div>
