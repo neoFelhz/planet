@@ -29,14 +29,14 @@
 
 <body class="mdui-drawer-body-left">
     <div class="mdui-container">
-        <div class="mdui-row-xs-1 mdui-row-md-4">
+        <div class="mdui-row-xs-1 mdui-row-md-2">
             <%
                 var cstyles = 'abcd';
                 var limit = posts.length > config['planet'].items ? config['planet'].items : posts.length
                 for (var i = 0; i < limit; i++) {
                     var p = posts[i];
             %>
-            <div class="mdui-col post">
+            <div class="mdui-col post mdui-p-t-1">
                 <div class="mdui-card">
                     <div class="mdui-card-header">
                         <% if (p.avatar) { %>
@@ -45,7 +45,10 @@
                             <img class="mdui-card-header-avatar" alt="<%= p.author %>&#x27;s avatar" data-original="img/akarin.jpg">
                         <% } %>
                         <div class="mdui-card-header-title"><%= p.author %></div>
-                        <div class="mdui-card-header-subtitle"><%= p.date %><% if (p.update && p.update !== p.date) { %> | Update <%= p.update %><% } %></div>
+                        <div class="mdui-card-header-subtitle"><%= p.date %></div>
+                        <% if (p.update && p.update !== p.date) { %>
+                            <div class="mdui-card-header-subtitle">Update: <%= p.update %></div>
+                        <% } %>
                     </div>
                     <div class="mdui-card-primary">
                         <div class="mdui-card-primary-title"><%= p.title %></div>
