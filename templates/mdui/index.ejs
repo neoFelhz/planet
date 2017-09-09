@@ -27,11 +27,20 @@
     <!-- End Google Analytics -->
 </head>
 
-<body class="mdui-drawer-body-left">
+<body class="mdui-drawer-body-left  mdui-appbar-with-toolbar">
+<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-hidden-md-up">
     <div class="mdui-toolbar mdui-shadow-5" mdui-headroom>
         <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
         <span class="mdui-typo-title"><%= config['planet'].name %></span>
     </div>
+</div>
+<div class="mdui-appbar mdui-appbar-fixed mdui-hidden-sm-down">
+    <div class="mdui-toolbar mdui-shadow-5" mdui-headroom>
+        <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
+        <span class="mdui-typo-title"><%= config['planet'].name %></span>
+    </div>
+</div>
+
     <div class="mdui-container">
         <div class="mdui-row-xs-1">
             <%
@@ -76,7 +85,7 @@
         </div>
     </div>
     <div class="mdui-drawer mdui-drawer-full-height mdui-shadow-4"  id="main-drawer">
-        <div class="mdui-grid-tile">
+        <div class="mdui-grid-tile mdui-hidden-md-up">
             <img src="https://i.nfz.yecdn.com/home/unification.png"/>
             <div class="mdui-grid-tile-actions">
                 <div class="mdui-grid-tile-text">
