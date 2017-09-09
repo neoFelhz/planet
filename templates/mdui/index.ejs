@@ -27,19 +27,23 @@
     <!-- End Google Analytics -->
 </head>
 
-<body class="mdui-drawer-body-left  mdui-appbar-with-toolbar">
-<div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-hidden-md-up">
-    <div class="mdui-toolbar mdui-shadow-5" mdui-headroom>
-        <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
-        <span class="mdui-typo-title"><%= config['planet'].name %></span>
+<body class="mdui-appbar-with-toolbar">
+    <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
+        <div class="mdui-toolbar mdui-shadow-5 mdui-color-blue-grey-50">
+            <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true, overlay: true}"><i class="mdui-icon material-icons">menu</i></span>
+            <span class="mdui-typo-title"><%= config['planet'].name %></span>
+            <div class="mdui-toolbar-spacer"></div>
+            <button class="mdui-btn mdui-btn-icon" mdui-menu="{target: 'subscribe-list'}"><i class="mdui-icon material-icons">rss_feed</i></button>
+            <ul class="mdui-menu" id="subscribe-list">
+                <li class="mdui-menu-item">
+                    <a href="atom.xml" class="mdui-ripple">Atom</a>
+                </li>
+                <li class="mdui-menu-item">
+                    <a href="rss.xml" class="mdui-ripple">RSS</a>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
-<div class="mdui-appbar mdui-appbar-fixed mdui-hidden-sm-down">
-    <div class="mdui-toolbar mdui-shadow-5" mdui-headroom>
-        <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
-        <span class="mdui-typo-title"><%= config['planet'].name %></span>
-    </div>
-</div>
 
     <div class="mdui-container">
         <div class="mdui-row-xs-1">
@@ -84,8 +88,8 @@
             <% } %>
         </div>
     </div>
-    <div class="mdui-drawer mdui-drawer-full-height mdui-shadow-4"  id="main-drawer">
-        <div class="mdui-grid-tile mdui-hidden-md-up">
+    <div class="mdui-drawer mdui-drawer-full-height mdui-shadow-4 mdui-drawer-close"  id="main-drawer">
+        <div class="mdui-grid-tile">
             <img src="https://i.nfz.yecdn.com/home/unification.png"/>
             <div class="mdui-grid-tile-actions">
                 <div class="mdui-grid-tile-text">
@@ -94,16 +98,7 @@
             </div>
         </div>
         <ul class="mdui-list">
-            <li class="mdui-subheader">Subscribe</li>
-            <a href="atom.xml" class="mdui-list-item mdui-ripple">
-                <i class="mdui-list-item-icon mdui-icon material-icons">rss_feed</i>
-                <div class="mdui-list-item-content">ATOM</div>
-            </a>
-            <a href="rss.xml" class="mdui-list-item mdui-ripple">
-                <i class="mdui-list-item-icon mdui-icon material-icons">rss_feed</i>
-                <div class="mdui-list-item-content">RSS</div>
-            </a>
-            <li class="mdui-subheader">List</li>
+            <li class="mdui-subheader">Subscribe List</li>
             <% config['people'].forEach(function(s) { %>
                 <a href="<%= s.link %>" class="mdui-list-item mdui-ripple"><%= s.name %></a>
             <% }) %>
