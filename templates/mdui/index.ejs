@@ -29,15 +29,14 @@
 
 <body class="mdui-drawer-body-left">
     <div class="mdui-container">
-        <div class="mdui-row">
+        <div class="mdui-row-xs-1 mdui-row-md-4">
             <%
                 var cstyles = 'abcd';
                 var limit = posts.length > config['planet'].items ? config['planet'].items : posts.length
                 for (var i = 0; i < limit; i++) {
                     var p = posts[i];
             %>
-            <section class="post">
-            <div class="mdui-col-sm-12 mdui-col-md-4">
+            <div class="mdui-col post">
                 <div class="mdui-card">
                     <div class="mdui-card-header">
                         <% if (p.avatar) { %>
@@ -49,12 +48,10 @@
                         <div class="mdui-card-header-subtitle"><%= p.date %><% if (p.update && p.update !== p.date) { %> | Update <%= p.update %><% } %></div>
                     </div>
                     <div class="mdui-card-primary">
-                        <div class="mdui-card-primary-title"><a href="<%= p.link %>" target="_blank"><%= p.title %></a></div>
-                        <%
-                            p.categories.forEach(function(category) {
-                        %>
-                            <div class="mdui-card-primary-subtitle"><%= category %></div>
-                        <% }) %>
+                        <div class="mdui-card-primary-title"><%= p.title %></div>
+                        <div class="mdui-card-primary-subtitle">
+                        <% p.categories.forEach(function(category) { %><%= category %>&nbsp;<% }) %>
+                        </div>
                     </div>
                     <div class="mdui-card-content">
                         <% if (p._length > config['planet'].display_length && p.summary) { %>
@@ -64,10 +61,9 @@
                         <% } %>
                     </div>
                     <div class="mdui-card-actions mdui-text-center">
-                        <a href="<%= p.link %>" class="mdui-btn mdui-ripple">Continue reading...</a>
+                        <a href="<%= p.link %>" target="_blank" class="mdui-btn mdui-ripple">Continue reading...</a>
                     </div>
                 </div>
-            </section>
             </div>
             <% } %>
         </div>
