@@ -25,23 +25,15 @@
     </script>
     <script async src='https://www.google-analytics.com/analytics.js'></script>
     <!-- End Google Analytics -->
-    <style>
-    .mdui-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        box-sizing: border-box;
-        width: 100%;
-        margin: 16px auto 0;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
-    </style>
 </head>
 
 <body class="mdui-drawer-body-left">
+    <div class="mdui-toolbar">
+        <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
+        <span class="mdui-typo-title"><%= config['planet'].name %></span>
+    </div>
     <div class="mdui-container">
-        <div class="mdui-row-xs-1 mdui-row-md-2">
+        <div class="mdui-row-xs-1">
             <%
                 var cstyles = 'abcd';
                 var limit = posts.length > config['planet'].items ? config['planet'].items : posts.length
@@ -83,7 +75,7 @@
             <% } %>
         </div>
     </div>
-    <div class="mdui-drawer">
+    <div class="mdui-drawer mdui-drawer-full-height"  id="main-drawer">
         <div class="mdui-grid-tile">
             <img src="https://i.nfz.yecdn.com/home/unification.png"/>
             <div class="mdui-grid-tile-actions">
