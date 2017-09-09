@@ -8,7 +8,7 @@ planet:
   locale: zh-CN # Site locale
   owner_name: neoFelhz # Your name
   owner_email: neoFelhz@gmail.com # Your email
-  theme: pure # theme under templates directory
+  theme: mdui # theme under templates directory
   output: public # output directory, make sure your web server can read in this place
   timeout: 40 # request timeout in seconds
   items: 150 # how many posts should be displayed?
