@@ -50,7 +50,11 @@
                     </div>
                     <div class="mdui-card-primary">
                         <div class="mdui-card-primary-title"><a href="<%= p.link %>" target="_blank"><%= p.title %></a></div>
-                        <div class="mdui-card-primary-subtitle"><%= category %></div>
+                        <%
+                            p.categories.forEach(function(category) {
+                        %>
+                            <div class="mdui-card-primary-subtitle"><%= category %></div>
+                        <% }) %>
                     </div>
                     <div class="mdui-card-content">
                         <% if (p._length > config['planet'].display_length && p.summary) { %>
