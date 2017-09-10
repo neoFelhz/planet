@@ -30,7 +30,7 @@
 <body class="mdui-appbar-with-toolbar">
     <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
         <div class="mdui-toolbar mdui-shadow-5 mdui-color-grey-50">
-            <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true, overlay: true}"><i class="mdui-icon material-icons">menu</i></span>
+            <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
             <span class="mdui-typo-title"><%= config['planet'].name %></span>
             <div class="mdui-toolbar-spacer"></div>
             <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-menu="{target: '#subscribe-list'}"><i class="mdui-icon material-icons">rss_feed</i></span>
@@ -54,7 +54,7 @@
                     var p = posts[i];
             %>
             <div class="mdui-col-xs-12 mdui-col-sm-8 mdui-col-offset-sm-2 mdui-p-t-1">
-                <div class="mdui-card">
+                <div class="mdui-card mdui-hoverable mdui-shadow-4">
                     <div class="mdui-card-header">
                         <% if (p.avatar) { %>
                             <img class="mdui-card-header-avatar" alt="<%= p.author %>&#x27;s avatar" data-original="<%= p.avatar %>">
