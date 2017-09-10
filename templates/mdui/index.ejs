@@ -28,7 +28,7 @@
 </head>
 
 <body class="mdui-appbar-with-toolbar">
-    <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
+        <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
         <div class="mdui-toolbar mdui-shadow-5 mdui-color-grey-50">
             <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true, overlay: true}"><i class="mdui-icon material-icons">menu</i></span>
             <span class="mdui-typo-title"><%= config['planet'].name %></span>
@@ -44,24 +44,23 @@
             </ul>
         </div>
     </div>
-
-    <div class="mdui-container">
-        <div class="mdui-drawer mdui-drawer-full-height mdui-shadow-4 mdui-drawer-close"  id="main-drawer">
-            <div class="mdui-grid-tile">
-                <img src="https://i.nfz.yecdn.com/home/unification.png"/>
-                <div class="mdui-grid-tile-actions">
-                    <div class="mdui-grid-tile-text">
-                        <div class="mdui-grid-tile-title"><%= config['planet'].name %></div>
-                    </div>
+    <div class="mdui-drawer mdui-color-white mdui-drawer-full-height mdui-shadow-4 mdui-drawer-close"  id="main-drawer">
+        <div class="mdui-grid-tile">
+            <img src="https://i.nfz.yecdn.com/home/unification.png"/>
+            <div class="mdui-grid-tile-actions">
+                <div class="mdui-grid-tile-text">
+                    <div class="mdui-grid-tile-title"><%= config['planet'].name %></div>
                 </div>
             </div>
-            <ul class="mdui-list">
-                <li class="mdui-subheader">Subscribe List</li>
-                <% config['people'].forEach(function(s) { %>
-                    <a href="<%= s.link %>" class="mdui-list-item mdui-ripple"><%= s.name %></a>
-                <% }) %>
-            </ul>
         </div>
+        <ul class="mdui-list">
+            <li class="mdui-subheader">Subscribe List</li>
+            <% config['people'].forEach(function(s) { %>
+                <a href="<%= s.link %>" class="mdui-list-item mdui-ripple"><%= s.name %></a>
+            <% }) %>
+        </ul>
+    </div>
+    <div class="mdui-container">
         <div class="mdui-row">
             <%
                 var cstyles = 'abcd';
