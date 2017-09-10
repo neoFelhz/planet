@@ -9,6 +9,7 @@ script:
   - chmod +x ./deploy.sh
   - npm run build
   - \cp -f CNAME public/CNAME
+  - \cp -f favicon.ico public/favicon.ico
   - ./deploy.sh > /dev/null
 cache:
   directories:

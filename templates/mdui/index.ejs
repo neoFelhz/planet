@@ -3,37 +3,29 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="icon shortcut" type="image/ico" href="https://i.nfz.yecdn.com/favicon.ico">
+    <link rel="icon shortcut" type="image/ico" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<%= config['planet'].description %>">
     <title><%= config['planet'].name %></title>
     <link rel="alternate" type="application/atom+xml" href="atom.xml" />
     <link rel="alternate" type="application/rss+xml" href="rss.xml" />
-    <link rel="stylesheet" href="https://cdnjs.cat.net/ajax/libs/mdui/0.3.0/css/mdui.min.css">
-    <script src="https://cdnjs.cat.net/ajax/libs/mdui/0.3.0/js/mdui.min.js"></script>
-    <script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cat.net/ajax/libs/pangu/3.3.0/pangu.min.js"></script>
-    <script src="https://cdnjs.cat.net/ajax/libs/vanilla-lazyload/8.0.1/lazyload.min.js"></script>
-    <!-- Google Analytics -->
-    <script>
-        window.ga = window.ga || function() {
-            (ga.q = ga.q || []).push(arguments)
-        };
-        ga.l = +new Date;
-        ga('create', 'UA-83054354-5', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
-    <!-- End Google Analytics -->
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <script src="js/mdui.min.js"></script>
+    <script src="js/highlight.min.js"></script>
+    <script src="js/pangu.min.js"></script>
+    <script src="js/lazyload.min.js"></script>
 </head>
 
 <body class="mdui-appbar-with-toolbar">
-        <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
+
+    <!-- AppBar -->
+    <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
         <div class="mdui-toolbar mdui-shadow-5 mdui-color-grey-50">
             <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true, overlay: true}"><i class="mdui-icon material-icons">menu</i></span>
             <span class="mdui-typo-title"><%= config['planet'].name %></span>
             <div class="mdui-toolbar-spacer"></div>
             <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-menu="{target: '#subscribe-list'}"><i class="mdui-icon material-icons">rss_feed</i></span>
+            <!-- Subscribe -->
             <ul class="mdui-menu" id="subscribe-list">
                 <li class="mdui-menu-item">
                     <a href="atom.xml" class="mdui-ripple">Atom</a>
@@ -44,9 +36,11 @@
             </ul>
         </div>
     </div>
+
+    <!-- drawer -->
     <div class="mdui-drawer mdui-color-white mdui-drawer-full-height mdui-shadow-4 mdui-drawer-close"  id="main-drawer">
         <div class="mdui-grid-tile">
-            <img src="https://i.nfz.yecdn.com/home/unification.png"/>
+            <img src="img/unification.png"/>
             <div class="mdui-grid-tile-actions">
                 <div class="mdui-grid-tile-text">
                     <div class="mdui-grid-tile-title"><%= config['planet'].name %></div>
@@ -60,8 +54,12 @@
             <% }) %>
         </ul>
     </div>
+
+
     <div class="mdui-container">
         <div class="mdui-row">
+        
+        <!-- Post List -->
             <%
                 var cstyles = 'abcd';
                 var limit = posts.length > config['planet'].items ? config['planet'].items : posts.length
@@ -72,9 +70,9 @@
                 <div class="mdui-card mdui-hoverable mdui-shadow-4">
                     <div class="mdui-card-header">
                         <% if (p.avatar) { %>
-                            <img class="mdui-card-header-avatar" alt="<%= p.author %>&#x27;s avatar" data-original="<%= p.avatar %>">
+                            <img class="mdui-card-header-avatar" data-original="<%= p.avatar %>">
                         <% } else { %>
-                            <img class="mdui-card-header-avatar" alt="<%= p.author %>&#x27;s avatar" data-original="img/akarin.jpg">
+                            <img class="mdui-card-header-avatar" data-original="img/akarin.jpg">
                         <% } %>
                         <div class="mdui-card-header-title"><%= p.author %></div>
                         <div class="mdui-card-header-subtitle">Publish: <%= p.date %></div>
