@@ -106,7 +106,7 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://cdn-x-w.momentcdn.net/59b1718cceb70f548d00008f/0.4.0.0.0/e0b4cbdaf7fc2d85eebd4e66842a1ffa.momentcdn.com/img/600px.php?url=' + host + attribs.src,
+                                src: 'https://api.onji.cn/img/600px.php?url=' + host + attribs.src,
                                 referrerpolicy: 'no-referrer'
                             }
                         };
@@ -116,7 +116,7 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://cdn-x-w.momentcdn.net/59b1718cceb70f548d00008f/0.4.0.0.0/e0b4cbdaf7fc2d85eebd4e66842a1ffa.momentcdn.com/img/?url=' + attribs.src,
+                                src: 'https://api.onji.cn/img/600px.php?url=' + attribs.src,
                                 referrerpolicy: 'no-referrer'
                             }
                         };
@@ -125,7 +125,7 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://cdn-x-w.momentcdn.net/59b1718cceb70f548d00008f/0.4.0.0.0/e0b4cbdaf7fc2d85eebd4e66842a1ffa.momentcdn.com/img/?url=' + host + '/' + attribs.src,
+                                src: 'https://api.onji.cn/img/600px.php?url=' + host + '/' + attribs.src,
                                 referrerpolicy: 'no-referrer'
                             }
                         };
@@ -134,7 +134,7 @@ function sanitize (content, config, origin) {
                 return {
                     tagName: tagName,
                     attribs: {
-                        src: 'https://cdn-x-w.momentcdn.net/59b1718cceb70f548d00008f/0.4.0.0.0/e0b4cbdaf7fc2d85eebd4e66842a1ffa.momentcdn.com/img/?url=' + attribs.src,
+                        src: 'https://api.onji.cn/img/600px.php?url=' + attribs.src,
                         referrerpolicy: 'no-referrer'
                       }
                 };
