@@ -106,7 +106,7 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://img2.nfz.yecdn.com/img/600px?url=' + host + attribs.src,
+                                src: 'https://imgproxy.nfz.yecdn.com/img/600px.php?url=' + host + attribs.src,
                                 referrerpolicy: 'no-referrer'
                             }
                         };
@@ -116,7 +116,7 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://img2.nfz.yecdn.com/img/600px?url=' + attribs.src,
+                                src: 'https://imgproxy.nfz.yecdn.com/img/600px.php?url=' + attribs.src,
                                 referrerpolicy: 'no-referrer'
                             }
                         };
@@ -125,7 +125,7 @@ function sanitize (content, config, origin) {
                         return {
                             tagName: tagName,
                             attribs: {
-                                src: 'https://img2.nfz.yecdn.com/img/600px?url=' + host + '/' + attribs.src,
+                                src: 'https://imgproxy.nfz.yecdn.com/img/600px.php?url=' + host + '/' + attribs.src,
                                 referrerpolicy: 'no-referrer'
                             }
                         };
@@ -134,7 +134,7 @@ function sanitize (content, config, origin) {
                 return {
                     tagName: tagName,
                     attribs: {
-                        src: 'https://img2.nfz.yecdn.com/img/600px?url=' + attribs.src,
+                        src: 'https://imgproxy.nfz.yecdn.com/img/600px.php?url=' + attribs.src,
                         referrerpolicy: 'no-referrer'
                       }
                 };
