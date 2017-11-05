@@ -33,7 +33,7 @@
                     var p = posts[i];
             %>
                 <div class="col s12 m6">
-                    <div class="card small hoverable">
+                    <div class="card medium hoverable">
                         <div class="card-content black-text">
                             <div class="row valign-wrapper">
                                 <div class="col s2">
@@ -49,7 +49,7 @@
                             <p>
                                 <p><b>Publish:</b><%= p.date %></p>
                                 <% if (p.update && p.update !== p.date) { %>
-                                    <p><b>Update:<%= p.update %></b></p>
+                                    <p><b>Update:</b><%= p.update %></p>
                                 <% } %>
                                 <p>
                                     <% p.categories.forEach(function(category) { %><%= category %>&nbsp;·&nbsp;<% }) %>
