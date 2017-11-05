@@ -21,19 +21,18 @@
     <nav class="grey lighten-3">
         <div class="nav-wrapper">
             <ul class="left"><li><a href="#" data-activates="drawer" id="btn-drawer"><i class="material-icons black-text">menu</i></a></li></ul>
-            <a class="brand-logo center black-text"><%= config['planet'].name %></a>
+            <a class="brand-logo center black-text"><small><%= config['planet'].name %></small></a>
         </div>
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col s12 m6">
-
-                <%
-                    var cstyles = 'abcd';
-                    var limit = posts.length > config['planet'].items ? config['planet'].items : posts.length
-                    for (var i = 0; i < limit; i++) {
-                        var p = posts[i];
-                %>
+            <%
+                var cstyles = 'abcd';
+                var limit = posts.length > config['planet'].items ? config['planet'].items : posts.length
+                for (var i = 0; i < limit; i++) {
+                    var p = posts[i];
+            %>
+                <div class="col s12 m6">
                     <div class="card small hoverable">
                         <div class="card-content black-text">
                             <div class="row valign-wrapper">
@@ -67,9 +66,8 @@
                             <a href="#" class="black-text"><b>Continue Reading</b></a>
                         </div>
                     </div>
-                <% } %>
-            </div>
-
+                </div>
+            <% } %>
         </div>
     </div>
     <ul id="drawer" class="side-nav">
