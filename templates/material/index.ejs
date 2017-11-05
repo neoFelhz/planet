@@ -35,7 +35,7 @@
                 <div class="col s12 m6">
                     <div class="card medium hoverable">
                         <div class="card-content black-text">
-                            <div class="row valign-wrapper">
+                            <div class="row valign-wrapper" style="margin-bottom: 0!important">
                                 <div class="col s2">
                                 <% if (p.avatar) { %>
                                     <img class="circle responsive-img" data-original="<%= p.avatar %>">
@@ -63,7 +63,7 @@
                             </p>
                         </div>
                         <div class="card-action waves-effect center">
-                            <a href="#" class="black-text"><b>Continue Reading</b></a>
+                            <a href="<%= p.link %>" target="_blank" class="black-text"><b>Continue Reading</b></a>
                         </div>
                     </div>
                 </div>
