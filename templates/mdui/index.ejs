@@ -89,7 +89,7 @@
                             <% p.categories.forEach(function(category) { %><%= category %>&nbsp;<% }) %>
                         </div>
                     </div>
-                    <div class="mdui-card-content">
+                    <div class="mdui-card-content mdui-color-white">
                         <% if (p._length > config['planet'].display_length && p.summary) { %>
                             <%- p.summary.replace(new RegExp('src=','g'),'referrerpolicy="no-referrer" data-original=') %>
                         <% } else { %>
