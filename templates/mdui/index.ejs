@@ -3,17 +3,21 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="icon shortcut" type="image/ico" href="favicon.ico">
+    <link rel="icon shortcut" type="image/ico" href="https://i.v2ex.co/U326QjN0s.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<%= config['planet'].description %>">
     <title><%= config['planet'].name %></title>
-    <link rel="alternate" type="application/atom+xml" href="atom.xml" />
-    <link rel="alternate" type="application/rss+xml" href="rss.xml" />
+    <link rel="alternate" type="application/atom+xml" href="atom.xml">
+    <link rel="alternate" type="application/rss+xml" href="rss.xml">
     <link rel="stylesheet" href="https://cdnjs.cat.net/ajax/libs/mdui/0.3.0/css/mdui.min.css">
     <script src="https://cdnjs.cat.net/ajax/libs/mdui/0.3.0/js/mdui.min.js"></script>
     <script src="https://cdnjs.cat.net/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
     <script src="https://cdnjs.cat.net/ajax/libs/vanilla-lazyload/9.0.1/lazyload.min.js"></script>
-    <!-- Google Analytics -->
+    <style>
+        .mdui-card-content {
+            height: 150px!important;
+        }
+    </style>
     <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//dn-firweb.qbox.me/analytics.js','ga');ga('create','UA-83054354-5','auto');ga('send','pageview');</script>
 </head>
 
@@ -22,26 +26,18 @@
     <!-- AppBar -->
     <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide">
         <div class="mdui-toolbar mdui-shadow-5 mdui-color-grey-50">
-            <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true, overlay: true}"><i class="mdui-icon material-icons">menu</i></span>
+            <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: '#main-drawer', swipe: true, overlay: true}">
+                <i class="mdui-icon material-icons">menu</i>
+            </span>
             <span class="mdui-typo-title"><%= config['planet'].name %></span>
             <div class="mdui-toolbar-spacer"></div>
-            <span class="mdui-btn mdui-btn-icon mdui-ripple" mdui-menu="{target: '#subscribe-list'}"><i class="mdui-icon material-icons">rss_feed</i></span>
-            <!-- Subscribe -->
-            <ul class="mdui-menu" id="subscribe-list">
-                <li class="mdui-menu-item">
-                    <a href="atom.xml" class="mdui-ripple">Atom</a>
-                </li>
-                <li class="mdui-menu-item">
-                    <a href="rss.xml" class="mdui-ripple">RSS</a>
-                </li>
-            </ul>
         </div>
     </div>
 
     <!-- drawer -->
-    <div class="mdui-drawer mdui-color-white mdui-drawer-full-height mdui-shadow-4 mdui-drawer-close"  id="main-drawer">
+    <div class="mdui-drawer mdui-color-white mdui-drawer-full-height mdui-shadow-4 mdui-drawer-close" id="main-drawer">
         <div class="mdui-grid-tile">
-            <img src="img/unification.png"/>
+            <img src="https://0d077ef9e74d8.cdn.sohucs.com/qBXHvo3_jpg" />
             <div class="mdui-grid-tile-actions">
                 <div class="mdui-grid-tile-text">
                     <div class="mdui-grid-tile-title"><%= config['planet'].name %></div>
@@ -49,6 +45,9 @@
             </div>
         </div>
         <ul class="mdui-list">
+            <li class="mdui-subheader">Subscribe Planet</li>
+            <a href="atom.xml" class="mdui-list-item mdui-ripple">Atom</a>
+            <a href="rss.xml" class="mdui-list-item mdui-ripple">RSS</a>
             <li class="mdui-subheader">Subscribe List</li>
             <% config['people'].forEach(function(s) { %>
                 <a href="<%= s.link %>" class="mdui-list-item mdui-ripple"><%= s.name %></a>
@@ -59,21 +58,21 @@
 
     <div class="mdui-container">
         <div class="mdui-row">
-        
-        <!-- Post List -->
+
+            <!-- Post List -->
             <%
                 var cstyles = 'abcd';
                 var limit = posts.length > config['planet'].items ? config['planet'].items : posts.length
                 for (var i = 0; i < limit; i++) {
                     var p = posts[i];
             %>
-            <div class="mdui-col-xs-12 mdui-col-sm-8 mdui-col-offset-sm-2 mdui-p-t-1">
+            <div class="mdui-col-sm-6 mdui-col-md-4 mdui-p-y-1">
                 <div class="mdui-card mdui-hoverable mdui-shadow-4">
                     <div class="mdui-card-header">
                         <% if (p.avatar) { %>
                             <img class="mdui-card-header-avatar" data-original="<%= p.avatar %>">
                         <% } else { %>
-                            <img class="mdui-card-header-avatar" data-original="img/akarin.jpg">
+                            <img class="mdui-card-header-avatar" data-original="https://0d077ef9e74d8.cdn.sohucs.com/qC9EdnF_jpg">
                         <% } %>
                         <div class="mdui-card-header-title"><%= p.author %></div>
                         <div class="mdui-card-header-subtitle">Publish: <%= p.date %></div>
@@ -84,7 +83,7 @@
                     <div class="mdui-card-primary">
                         <div class="mdui-card-primary-title"><%= p.title %></div>
                         <div class="mdui-card-primary-subtitle">
-                        <% p.categories.forEach(function(category) { %><%= category %>&nbsp;<% }) %>
+                            <% p.categories.forEach(function(category) { %><%= category %>&nbsp;<% }) %>
                         </div>
                     </div>
                     <div class="mdui-card-content">
@@ -95,7 +94,7 @@
                         <% } %>
                     </div>
                     <div class="mdui-divider"></div>
-                    <div class="mdui-card-actions mdui-text-center">
+                    <div class="mdui-card-actions mdui-text-center mdui-color-white">
                         <a href="<%= p.link %>" target="_blank" class="mdui-btn mdui-ripple">Continue reading...</a>
                     </div>
                 </div>
