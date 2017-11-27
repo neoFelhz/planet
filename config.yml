@@ -8,7 +8,7 @@ planet:
   locale: zh-CN # Site locale
   owner_name: neoFelhz # Your name
   owner_email: neoFelhz@gmail.com # Your email
-  theme: material # theme under templates directory
+  theme: mdui # theme under templates directory
   output: public # output directory, make sure your web server can read in this place
   timeout: 40 # request timeout in seconds
   items: 150 # how many posts should be displayed?
@@ -103,9 +103,6 @@ people:
 - name: KookXiang
   link: https://ikk.me/feed
   avatar: https://bbs-static.nfz.yecdn.com/links/ikk.me.jpg
-- name: Trumeet
-  link: https://blog.trumeet.top/atom.xml
-  avatar: https://bbs-static.nfz.yecdn.com/links/trumeet.top.png
 - name: LWL12
   link: https://blog.lwl12.com/feed
   avatar: https://bbs-static.nfz.yecdn.com/links/blog.lwl12.com.jpg
@@ -130,15 +127,15 @@ people:
 - name: PoiScript
   link: https://blog.poi.cat/atom.xml
   avatar: https://bbs-static.nfz.yecdn.com/links/blog.poi.cat.png
+- name: DCC
+  link: https://dcc.cat/feed
+  avatar: https://bbs-static.nfz.yecdn.com/links/dcc.cat.png
 - name: Netrvin
   link: https://131.re/feed
   avatar: https://bbs-static.nfz.yecdn.com/links/131.re.jpg
 - name: Ice-Hazymoon
   link: https://imiku.me/feed
   avatar: https://bbs-static.nfz.yecdn.com/links/imiku.me.png
-- name: 梦魇小站
-  link: https://blog.ihoey.com/atom.xml
-  avatar: https://bbs-static.nfz.yecdn.com/links/blog.ihoey.com.png
 - name: 只有一秒的记忆
   link: https://blog.asec01.net/feed.xml
   avatar: https://bbs-static.nfz.yecdn.com/links/blog.asec01.net.png
@@ -151,3 +148,6 @@ people:
 - name: Ephen
   link: https://ephen.me/atom.xml
   avatar: https://bbs-static.nfz.yecdn.com/links/ephen.me.jpg
+- name: 可乐没气的猫
+  link: https://www.isthnew.com/atom.xml
+  avatar: https://bbs-static.nfz.yecdn.com/links/www.isthnew.com.png

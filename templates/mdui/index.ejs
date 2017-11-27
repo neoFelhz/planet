@@ -88,9 +88,9 @@
                     </div>
                     <div class="mdui-card-content">
                         <% if (p._length > config['planet'].display_length && p.summary) { %>
-                            <%- p.summary.replace(new RegExp('src=','g'),'data-original=') %>
+                            <%- p.summary.replace(new RegExp('src=','g'),'referrerpolicy="no-referrer" data-original=') %>
                         <% } else { %>
-                            <%- p.content.replace(new RegExp('src=','g'),'data-original=') %>
+                            <%- p.content.replace(new RegExp('src=','g'),'referrerpolicy="no-referrer" data-original=') %>
                         <% } %>
                     </div>
                     <div class="mdui-divider"></div>
