@@ -91,9 +91,9 @@
                     </div>
                     <div class="mdui-card-content mdui-color-white">
                         <% if (p._length > config['planet'].display_length && p.summary) { %>
-                            <%- p.summary.replace(new RegExp('src="https://','g'),'data-original="https://i1.wp.com/';new RegExp('src="//','g'),'data-original="https://i1.wp.com/') %>
+                            <%- p.summary.replace(new RegExp('src=','g'),'data-original=') %>
                         <% } else { %>
-                            <%- p.content.replace(new RegExp('src="https://','g'),'data-original="https://i1.wp.com/';new RegExp('src="//','g'),'data-original="https://i1.wp.com/') %>
+                            <%- p.content.replace(new RegExp('src=','g'),'data-original=') %>
                         <% } %>
                     </div>
                     <div class="mdui-divider"></div>
