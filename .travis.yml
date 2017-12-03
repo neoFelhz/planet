@@ -9,7 +9,7 @@ script:
   - npm run build
   - \cp -f CNAME public/CNAME
   - \cp -f favicon.ico public/favicon.ico
-  - sed -i 's|data-original="https://|data-original="https://i1.wp.com/|g' public/index.html
+  - sed -i 's|data-original="//|data-original="https://i1.wp.com/|g' public/index.html
   - sed -i 's|data-original="http://|data-original="https://i1.wp.com/|g' public/index.html
   - sed -i 's|data-original="https://|data-original="https://i1.wp.com/|g' public/index.html
   - ./deploy.sh > /dev/null
