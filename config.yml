@@ -10,10 +10,10 @@ planet:
   owner_email: neoFelhz@gmail.com # Your email
   theme: mdui # theme under templates directory
   output: public # output directory, make sure your web server can read in this place
-  timeout: 40 # request timeout in seconds
+  timeout: 15 # request timeout in seconds
   items: 150 # how many posts should be displayed?
   items_feed: 300 # maximum posts in feed
-  display_length: 700 # posts longer than this characters, a summary will be displayed (if available)
+  display_length: 200 # posts longer than this characters, a summary will be displayed (if available)
   time_format: YYYY MMMM Do h:mm:ss A # See http://momentjs.com/docs/#/displaying/ for details
   ttl: 120 # TimeToLive minutes to cache site feed
   lazyload: true # Use Lazyload for image
@@ -151,3 +151,12 @@ people:
 - name: 可乐没气的猫
   link: https://www.isthnew.com/atom.xml
   avatar: https://bbs-static.nfz.yecdn.com/links/www.isthnew.com.png
+- name: 1A23
+  link: https://blog.1a23.com/atom.xml
+  avatar: https://bbs-static.nfz.yecdn.com/links/1a23.com.png
+- name: JerryQu
+  link: https://imququ.com/rss.html
+  avatar: https://i.loli.net/2017/12/04/5a242c26d2054.jpeg
+- name: Elepover
+  link: https://blog.elepover.com/feed/
+  avatar: https://bbs-static.nfz.yecdn.com/links/elepover.com.jpg
