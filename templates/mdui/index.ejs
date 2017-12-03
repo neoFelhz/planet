@@ -91,9 +91,9 @@
                     </div>
                     <div class="mdui-card-content mdui-color-white">
                         <% if (p._length > config['planet'].display_length && p.summary) { %>
-                            <%- p.summary.replace(new RegExp('src=','g'),'data-original=') %>
+                            <%- p.summary.replace(new RegExp('src=','g'),'data-src=') %>
                         <% } else { %>
-                            <%- p.content.replace(new RegExp('src=','g'),'data-original=') %>
+                            <%- p.content.replace(new RegExp('src=','g'),'data-src=') %>
                         <% } %>
                     </div>
                     <div class="mdui-divider"></div>
