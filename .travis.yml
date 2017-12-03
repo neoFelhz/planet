@@ -12,6 +12,7 @@ script:
   - sed -i 's|data-src="//|data-original="https://i1.wp.com/|g' public/index.html
   - sed -i 's|data-src="http://|data-original="https://i1.wp.com/|g' public/index.html
   - sed -i 's|data-src="https://|data-original="https://i1.wp.com/|g' public/index.html
+  - sed -i 's|">Continue reading...|" rel="nofollow noopener">Continue reading...|g' public/index.html
   - ./deploy.sh > /dev/null
 cache:
   directories:
